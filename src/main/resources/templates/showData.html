@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1  th:text="${titulo}"></h1>
+	<h2>Mostramos información del empleado</h2>
+	<ul>
+		<li th:text="${employee.id}"></li>
+		<li th:text="${employee.name}"></li>
+		<li th:text="${employee.age}"></li>
+	</ul>
+	<h2>Mostramos información del proyecto</h2>
+	<ul>
+		<li th:text="${project.id}"></li>
+		<li th:text="${project.name}"></li>
+		
+		<li th:text="${'Empleado nombre: ' + project.employee.name}"></li>
+		<li th:text="${'Empleado ID: ' + project.employee.id}"></li>
+		<li th:text="${'Empleado edad: ' + project.employee.age}"></li>
+	</ul>
+	</body>
+	</html>
